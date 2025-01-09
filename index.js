@@ -25,7 +25,8 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
-
+// Handle preflight OPTIONS requests globally
+app.options("*", cors());
 // configure routes
 
 app.use("/api/shopsphere/product", productRoutes);
