@@ -29,12 +29,7 @@ app.use(
 );
 // Handle preflight OPTIONS requests globally
 app.options("*", cors());
-app.use((req, res, next) => {
-  console.log(`Origin: ${req.headers.origin}`); // Logs the origin of the request
-  console.log(`Method: ${req.method}`); // Logs the HTTP method (GET, POST, etc.)
-  console.log("Response Headers:", res.getHeaders()); // Logs the response headers
-  next();
-});
+
 // configure routes
 
 app.use("/api/shopsphere/product", productRoutes);
