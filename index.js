@@ -15,6 +15,13 @@ import cartRouter from "./src/cart/routes/cart.routs.js";
 import orderRouter from "./src/orders/routes/order.routes.js";
 
 const app = express();
+// Logging middleware for debugging
+app.use((req, res, next) => {
+  console.log(`Origin: ${req.headers.origin}`); // Logs the origin of the request
+  console.log(`Method: ${req.method}`); // Logs the HTTP method (GET, POST, etc.)
+  console.log("Response Headers:", res.getHeaders()); // Logs the response headers
+  next();
+});
 app.use(express.json());
 app.use(cookieParser());
 app.use(
