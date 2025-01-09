@@ -27,9 +27,7 @@ app.use(
 );
 
 // configure routes
-app.use("/", (req, res) => {
-  res.send("You are visiting the base url of shopsphere backend");
-});
+
 app.use("/api/shopsphere/product", productRoutes);
 app.use("/api/shopsphere/user", userRoutes);
 app.use("/api/shopsphere/cart", cartRouter);
