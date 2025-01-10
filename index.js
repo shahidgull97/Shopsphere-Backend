@@ -21,7 +21,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173", // Adjust for your frontend's origin
+    origin:
+      "https://shop-sphere-f374wp062-shahid-gulls-projects-ecd28119.vercel.app", // Adjust for your frontend's origin
     credentials: true, // If you need credentials like cookies
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
