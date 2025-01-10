@@ -4,7 +4,7 @@ export const sendToken = async (user, res, statusCode) => {
   const token = user.getJWTToken();
   const cookieOptions = {
     httpOnly: true,
-    secure: false, // Set to true in production with HTTPS
+    secure: true, // Set to true in production with HTTPS
     sameSite: "None", // Must be 'None' for cross-origin cookies
 
     expires: new Date(
